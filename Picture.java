@@ -62,6 +62,8 @@ public class Picture
         campo.moveVertical(140);
         campo.moveHorizontal(-310);
         campo.makeVisible();
+        
+        sun.slowMoveVertical(125);
     }
 
     /**

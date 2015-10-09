@@ -1,4 +1,4 @@
- /**
+/**
  * This class represents a simple picture. You can draw the picture using
  * the draw method. But wait, there's more: being an electronic picture, it
  * can be changed. You can set it to black-and-white display and back to
@@ -17,6 +17,9 @@ public class Picture
     private Circle sun;
     private Square campo;
     private Person persona;
+    private Person niño;
+    private Square libro;
+    private Circle balon;
 
     /**
      * Constructor for objects of class Picture
@@ -123,5 +126,71 @@ public class Picture
             persona.slowMoveHorizontal(110);
         }
     }
+    
+    /**
+     * Change this picture to use color display
+     */
+    public void niñoBalonYLibro()
+    {
+        if (sun != null)   // only if it's painted already...
+        {
+          niño = new Person();
+          niño.moveHorizontal(120);
+          niño.moveVertical(42);
+          niño.changeSize(40,20);
+          balon = new Circle();
+          balon.moveHorizontal(130);
+          balon.moveVertical(160);
+          balon.changeSize(10);
+          libro = new Square();
+          libro.moveHorizontal(100);
+          libro.moveVertical(112);
+          libro.changeSize(10);
+          niño.makeVisible();
+          balon.makeVisible();
+          libro.makeVisible();
+        }
+    }
+    
+    /**
+     * Change this picture to black/white display
+     */
+    public void balon()
+    {
+        if (balon != null)   // only if it's painted already...
+        {
+            libro.slowMoveVertical(18);
+            niño.slowMoveHorizontal(-20);
+            balon.slowMoveHorizontal(-11);
+            balon.slowMoveVertical(-8);
+            balon.slowMoveHorizontal(-11);
+            balon.slowMoveVertical(-8);
+            balon.slowMoveHorizontal(-11);
+            balon.slowMoveVertical(-8);
+            balon.slowMoveHorizontal(-11);
+            balon.slowMoveVertical(-8);
+            balon.slowMoveHorizontal(-11);
+            balon.slowMoveVertical(-8);
+            balon.slowMoveHorizontal(-11);
+            balon.slowMoveVertical(-8);
+            balon.slowMoveHorizontal(-11);
+            balon.slowMoveVertical(-8);
+            balon.slowMoveHorizontal(-11);
+            balon.slowMoveVertical(-8);
+            balon.slowMoveHorizontal(-11);
+            balon.slowMoveVertical(-8);
+            balon.slowMoveHorizontal(-11);
+            balon.slowMoveVertical(-8);
+            balon.slowMoveHorizontal(-11);
+            balon.slowMoveVertical(-8);
+            balon.slowMoveHorizontal(-9);
+            wall.changeColor("black");
+            window.changeColor("white");
+            roof.changeColor("black");
+            sun.changeColor("black");
+            campo.changeColor("black");
+            balon.changeColor("white");
+            libro.changeColor("black");
+        }
+    }
 }
-

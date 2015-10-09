@@ -62,7 +62,6 @@ public class Picture
         sun.moveVertical(-40);
         sun.changeSize(80);
         sun.makeVisible();
-        sun.slowMoveVertical(125);
     }
 
     /**
@@ -92,4 +91,16 @@ public class Picture
             sun.changeColor("yellow");
         }
     }
+    
+    /**
+     * Change this picture to use color display
+     */
+    public void moveSun()
+    {
+        if (sun != null)   // only if it's painted already...
+        {
+            sun.slowMoveVertical(120);
+        }
+    }
 }
+

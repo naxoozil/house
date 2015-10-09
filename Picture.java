@@ -1,4 +1,4 @@
-/**
+ /**
  * This class represents a simple picture. You can draw the picture using
  * the draw method. But wait, there's more: being an electronic picture, it
  * can be changed. You can set it to black-and-white display and back to
@@ -15,7 +15,7 @@ public class Picture
     private Square window;
     private Triangle roof;
     private Circle sun;
-    private Circle sun2;
+    private Square campo;
 
     /**
      * Constructor for objects of class Picture
@@ -50,18 +50,18 @@ public class Picture
         roof.makeVisible();
 
         sun = new Circle();
-        sun.changeColor("blue");
+        sun.changeColor("yellow");
         sun.moveHorizontal(100);
         sun.moveVertical(-40);
         sun.changeSize(80);
         sun.makeVisible();
         
-        sun2 = new Circle();
-        sun2.changeColor("green");
-        sun2.moveHorizontal(-120);
-        sun2.moveVertical(-40);
-        sun2.changeSize(60);
-        sun2.makeVisible();
+        campo = new Square();
+        campo.changeColor("green");
+        campo.changeSize(500);
+        campo.moveVertical(140);
+        campo.moveHorizontal(-310);
+        campo.makeVisible();
     }
 
     /**

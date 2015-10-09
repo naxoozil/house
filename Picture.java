@@ -48,13 +48,6 @@ public class Picture
         roof.moveHorizontal(20);
         roof.moveVertical(-60);
         roof.makeVisible();
-
-        sun = new Circle();
-        sun.changeColor("yellow");
-        sun.moveHorizontal(100);
-        sun.moveVertical(-40);
-        sun.changeSize(80);
-        sun.makeVisible();
         
         campo = new Square();
         campo.changeColor("green");
@@ -63,6 +56,12 @@ public class Picture
         campo.moveHorizontal(-310);
         campo.makeVisible();
         
+        sun = new Circle();
+        sun.changeColor("yellow");
+        sun.moveHorizontal(100);
+        sun.moveVertical(-40);
+        sun.changeSize(80);
+        sun.makeVisible();
         sun.slowMoveVertical(125);
     }
 
